@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from formapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index_view, name='index_view'),
+    path('formpage/', views.form_view, name='form_view')
 ]
